@@ -1,0 +1,28 @@
+# Spring Boot application properties
+
+server:
+  port: 8083  # Port on which the application will run
+  
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/techno_Complaint  # Database connection URL
+    username: root  # Database username
+    password: root  # Database password
+    driver-class-name: com.mysql.cj.jdbc.Driver  # Database driver class
+    
+  jpa:
+    hibernate:
+      ddl-auto: update  # Hibernate DDL mode (update, create, create-drop, validate, none)
+    show-sql: true  # Show SQL queries in logs
+    
+  application:
+    name: COMPLAINT-SERVICE  # Application name
+    
+logging:
+  level:
+    org:
+      springframework: DEBUG  # Logging level for Spring framework components
+    com:
+      yourpackage: INFO  # Logging level for your package/components
+
+# Additional configurations go here
